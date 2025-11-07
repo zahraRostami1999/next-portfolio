@@ -51,7 +51,7 @@ export default function About() {
               <button
                 onClick={handleDownload}
                 disabled={downloading}
-                className={`bg-red-300 hover:bg-rose-400 text-neutral-800 hover:text-neutral-900 py-3 rounded-xl px-5 drop-shadow-lg transition-all ${
+                className={`bg-rose-300 hover:bg-rose-400 text-neutral-800 hover:text-neutral-900 py-3 rounded-xl px-5 drop-shadow-lg transition-all ${
                   downloading ? "opacity-70 cursor-not-allowed" : ""
                 }`}
               >
