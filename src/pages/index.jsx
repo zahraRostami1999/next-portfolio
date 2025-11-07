@@ -6,7 +6,7 @@ import Projects from "@/components/projects/Projects";
 import Contact from "@/components/contact/Contact";
 export default function Home() {
   return (
-    <div className="flex h-screen gap-5 pt-10">
+    <div className="flex flex-row-reverse h-screen gap-5 pt-10">
       <Sidebar />
       <div className="flex-1 rounded-xl overflow-hidden">
         <div className="h-full overflow-y-auto custom-scrollbar pb-5 pl-1 space-y-5">
