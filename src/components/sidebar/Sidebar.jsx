@@ -13,7 +13,7 @@ function Sidebar({ onNavigate }) {
   ];
 
   return (
-    <div className="p-5 bg-white w-[6%] h-[90vh] flex flex-col justify-center rounded-xl shadow-md border border-gray-100">
+    <div className="p-5 bg-white w-[6%] h-[90vh] flex flex-col justify-center rounded-xl shadow-md border border-neutral-100">
       <div className="mb-8 flex justify-center">
         <ThemeSwitcher />
       </div>
