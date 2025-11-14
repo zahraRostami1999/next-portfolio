@@ -62,12 +62,12 @@ export default function About() {
         </div>
         <div className="lg:w-2/5 md:w-2/5 sm:w-4/5 w-4/5 flex justify-center items-center md:items-start md:py-20">
           {!imgLoaded && (
-            <div className="w-2/3 lg:h-[400px] md:h-[350px] sm:[h-370px] h-[200px] rounded animate-pulse bg-gray-200" />
+            <div className="w-2/3 lg:h-[350px] md:h-[350px] sm:[h-370px] h-[200px] rounded animate-pulse bg-gray-200" />
           )}
           <Image
             src={Banner}
             alt="Zahra Rostami"
-            className="w-2/3 mx-auto lg:h-[400px] md:h-[350px] sm:[h-370px]"
+            className="w-2/3 mx-auto lg:h-[350px] md:h-[350px] sm:[h-370px]"
             onLoad={() => setImgLoaded(true)}
             style={{ display: imgLoaded ? "block" : "none" }}
             priority
