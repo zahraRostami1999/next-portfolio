@@ -20,7 +20,7 @@ export default function About() {
   };
 
   return (
-    <div className="w-full bg-white lg:py-0 sm:py-10 py-3 flex flex-wrap items-center p-5 h-[90vh] rounded-xl shadow-md border border-neutral-100">
+    <div className="w-full bg-white dark:bg-neutral-400 dark:text-white lg:py-0 sm:py-10 py-3 flex flex-wrap items-center p-5 h-[90vh] rounded-xl shadow-md border border-neutral-100">
       <div className="lg:px-2 w-full flex lg:justify-between sm:flex-wrap-reverse justify-center flex-wrap-reverse">
         <div className="lg:w-3/5 md:w-3/5 sm:w-4/5 w-11/12 lg:px-5 md:px-14">
           <div className="w-full h-full flex flex-wrap justify-start items-center sm:py-10 py-6 text-neutral-700">

@@ -31,9 +31,10 @@ const ThemeSwitcher = () => {
       aria-label="تغییر تم"
     >
       {isDark ? (
-        <HiOutlineMoon size={28} className="text-gray-300" />
-      ) : (
         <HiOutlineSun size={28} className="text-yellow-500" />
+
+      ) : (
+        <HiOutlineMoon size={28} className="text-neutral-400" />
       )}
     </button>
   );

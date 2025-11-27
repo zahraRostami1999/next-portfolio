@@ -22,7 +22,7 @@ export default function Home() {
   };
 
   return (
-    <div className="flex flex-row-reverse h-screen gap-5 pt-10">
+    <div className="flex flex-row-reverse h-screen gap-5 pt-8">
       <Sidebar
         onNavigate={(section) => {
           const refs = {
