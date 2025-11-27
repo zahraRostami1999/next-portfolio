@@ -38,9 +38,6 @@ export default function Home() {
       />
 
       <div className="flex-1 rounded-xl overflow-hidden">
-        <div className="w-full h-[200px] bg-blue-300 dark:bg-green-500">
-          TEST DARK MODE
-        </div>
         <div className="h-full overflow-y-auto custom-scrollbar pb-5 pl-1 space-y-12">
           <section ref={aboutRef} id="about"><About /></section>
           <section ref={skillsRef} id="skills"><Skills /></section>

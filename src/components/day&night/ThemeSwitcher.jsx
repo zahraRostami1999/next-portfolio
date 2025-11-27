@@ -27,7 +27,7 @@ const ThemeSwitcher = () => {
   return (
     <button
       onClick={handleChangeTheme}
-      className="mx-auto p-3 rounded-full bg-gray-100 dark:bg-gray-800 border border-gray-300 dark:border-gray-600 transition-all hover:scale-110 shadow-md"
+      className="mx-auto p-3 rounded-full  transition-all hover:scale-110 shadow-md"
       aria-label="تغییر تم"
     >
       {isDark ? (
