@@ -3,13 +3,13 @@
 @custom-variant dark (&:where(.dark, .dark *));
 
 :root {
-  --bg-primary: #fda4af;   /* rose-200 */
+  --bg-primary: #fda4af;   
   --bg-card: #ffffff;
-  --text-primary: #4c0519; /* rose-950 تقریباً */
-  --text-secondary: #9f1239; /* rose-800 */
-  --accent: #f43f5e;       /* rose-500 */
-  --accent-hover: #e11d48; /* rose-600 */
-  --border: #fecdd3;       /* rose-300 */
+  --text-primary: #4c0519; 
+  --text-secondary: #9f1239; 
+  --accent: #f43f5e;       
+  --accent-hover: #e11d48; 
+  --border: #fecdd3;       
 }
 
 .dark {
@@ -17,8 +17,8 @@
   --bg-card: #2d1b24;
   --text-primary: #fde7f0;
   --text-secondary: #f9a8d4;
-  --accent: #fb7185;       /* rose-400 */
-  --accent-hover: #fda4af; /* rose-200 ← اینجا همون رنگ اصلی برند می‌درخشه! */
+  --accent: #fb7185;       
+  --accent-hover: #fda4af; 
   --border: #603443;
 }
 
