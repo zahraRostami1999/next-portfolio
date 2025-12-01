@@ -14,7 +14,7 @@ function Sidebar({ onNavigate }) {
 
   return (
     <>
-      <div className="hidden md:flex p-5 bg-white w-20 h-[90vh] flex-col justify-center rounded-xl shadow-md border border-neutral-100">
+      <div className="hidden md:flex p-5 bg-(--bg-container) w-20 h-[90vh] flex-col justify-center rounded-xl shadow-md border border-(--border)">
         <div className="mb-8 flex justify-center">
           <ThemeSwitcher />
         </div>
@@ -30,7 +30,7 @@ function Sidebar({ onNavigate }) {
                 className={`
                   group relative mx-auto p-2 rounded-lg
                   transition-all duration-200 ease-out
-                  text-neutral-600 hover:text-rose-400 hover:bg-gray-50
+                  text-(--text-main) hover:text-(--text-secondary) hover:bg-(--bg-main)
                 `}
                 aria-label={item.label}
               >

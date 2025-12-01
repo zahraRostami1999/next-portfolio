@@ -2,7 +2,7 @@ import React from 'react'
 
 function Skills() {
   return (
-    <div className="bg-white rounded-xl p-5 h-[40vh]">
+    <div className="bg-(--bg-container) p-5 h-[40vh] rounded-xl shadow-md border border-(--border)">
       skills
     </div>
   )
