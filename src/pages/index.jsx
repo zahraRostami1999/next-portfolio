@@ -1,7 +1,7 @@
 import React, { useRef } from 'react';
 import Sidebar from "@/components/sidebar/Sidebar";
 import About from "@/components/about/About";
-import Skills from "@/components/skills/Skills";
+import { Skills } from '@/components/skills/Skills';
 import Education from "@/components/education/Education";
 import Projects from "@/components/projects/Projects";
 import Contact from "@/components/contact/Contact";
