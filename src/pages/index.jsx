@@ -3,6 +3,7 @@ import Sidebar from "@/components/sidebar/Sidebar";
 import About from "@/components/about/About";
 import { Skills } from '@/components/skills/Skills';
 import Education from "@/components/education/Education";
+import Experience from '@/components/experience/Experience';
 import Projects from "@/components/projects/Projects";
 import Contact from "@/components/contact/Contact";
 
@@ -42,7 +43,7 @@ export default function Home() {
           <section ref={aboutRef} id="about"><About /></section>
           <section ref={skillsRef} id="skills"><Skills /></section>
           <section ref={educationRef} id="education"><Education /></section>
-          <section ref={experienceRef} id="experience"><Projects /></section>
+          <section ref={experienceRef} id="experience"><Experience /></section>
           <section ref={projectsRef} id="projects"><Projects /></section>
           <section ref={contactRef} id="contact"><Contact /></section>
         </div>

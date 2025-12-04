@@ -34,7 +34,7 @@ function Sidebar({ onNavigate }) {
                 `}
                 aria-label={item.label}
               >
-                <Icon size={20} />
+                <Icon size={22} />
 
                 <span className="absolute right-full top-1/2 -translate-y-1/5 px-2 py-1.5 bg-neutral-700 text-white text-xs rounded opacity-0 group-hover:opacity-100 transition-opacity whitespace-nowrap pointer-events-none">
                   {item.label}
