@@ -24,7 +24,7 @@ export default function About() {
       <div className="lg:px-2 w-full flex lg:justify-between sm:flex-wrap-reverse justify-center flex-wrap-reverse">
         <div className="lg:w-3/5 md:w-3/5 sm:w-4/5 w-11/12 lg:px-5 md:px-14">
           <div className="w-full h-full flex flex-wrap justify-start items-center sm:py-10 py-6 text-(--text-main)">
-            <div className="lg:text-5xl md:text-3xl sm:text-2xl text-2xl w-full my-5">
+            <div className="lg:text-5xl md:text-5xl sm:text-2xl text-2xl w-full my-5">
               <div className="w-full">
                 Hello I'm{" "}
                 <span className="font-extrabold text-(--text-secondary)">
@@ -51,7 +51,7 @@ export default function About() {
               <button
                 onClick={handleDownload}
                 disabled={downloading}
-                className={`bg-(--bg-main) hover:bg-rose-400 text-(--text-main) hover:text-neutral-900 py-3 rounded-xl px-5 drop-shadow-lg transition-all ${
+                className={`bg-(--accent) hover:bg-(--accent-hover) shadow-md hover:shadow-xl text-white py-3 rounded-xl px-5 drop-shadow-lg transition-all ${
                   downloading ? "opacity-70 cursor-not-allowed" : ""
                 }`}
               >
