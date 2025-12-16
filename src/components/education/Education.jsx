@@ -4,13 +4,13 @@ import { GraduationCap, School } from 'lucide-react';
 
 function Education() {
   return (
-    <section className="py-20 px-6">
+    <section className="pt-5 pb-16 px-5">
       <div className="max-w-5xl mx-auto">
         <motion.h2 
           initial={{ opacity: 0, y: -20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          className="text-3xl md:text-4xl font-bold text-center mb-16 text-white"
+          className="text-4xl font-extrabold md:text-5xl text-center mb-20 text-(--text-secondary)"
         >
           Education
         </motion.h2>
