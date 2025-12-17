@@ -16,7 +16,7 @@ const customSlugify = (text) =>
     remove: /[%\$\#@\&\*\!\?]/g,
   });
 
-class Project {
+class ProjectItem {
   constructor({ id, title, cover, img, description, date, technologies, demoLink, githubLink, figmaLink }) {
     this.id = id;
     this.title = title;
@@ -32,8 +32,8 @@ class Project {
   }
 }
 
-export const Projects = [
-  new Project({
+export const ProjectsData = [
+  new ProjectItem({
     id: 1,
     title: "Weather App",
     cover: weatherCover,
@@ -45,7 +45,7 @@ export const Projects = [
     githubLink: "https://github.com/zahraRostami1999/weather-app",
     figmaLink: "",
   }),
-  new Project({
+  new ProjectItem({
     id: 2,
     title: "Clock & Stopwatch",
     cover: clockCover,
@@ -57,7 +57,7 @@ export const Projects = [
     githubLink: "https://github.com/zahraRostami1999/digital-clock-app",
     figmaLink: "",
   }),
-  new Project({
+  new ProjectItem({
     id: 3,
     title: "To-Do List",
     cover: todoCover,
@@ -69,7 +69,7 @@ export const Projects = [
     githubLink: "https://github.com/zahraRostami1999/TodoReact.git",
     figmaLink: "",
   }),
-  new Project({
+  new ProjectItem({
     id: 4,
     title: "Online Store",
     cover: shopCover,
