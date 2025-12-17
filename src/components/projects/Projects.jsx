@@ -25,7 +25,7 @@ function Projects() {
             initial={{ opacity: 0, y: -30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
-            className="text-4xl md:text-5xl font-extrabold text-[var(--text-secondary)] text-center mb-12"
+            className="text-4xl md:text-5xl font-extrabold text-(--text-secondary) text-center mb-12"
           >
             Projects
           </motion.h2>
@@ -38,8 +38,8 @@ function Projects() {
                 transition={{ delay: index * 0.1 }}
                 onClick={() => setSelectedTech(tech)}
                 className={`px-8 py-3 rounded-xl font-semibold text-lg transition-all duration-300 ${selectedTech === tech
-                  ? 'bg-[var(--accent)] text-white shadow-lg'
-                  : 'bg-white text-[var(--text-secondary)] border border-[var(--border)] hover:border-[var(--accent)] hover:shadow-md'
+                  ? 'bg-(--accent) text-white shadow-lg'
+                  : 'bg-white text-(--text-secondary) border border-(--border) hover:border-(--accent) hover:shadow-md'
                   }`}
               >
                 {tech === 'All' ? 'All Projects' : tech}
@@ -63,7 +63,7 @@ function Projects() {
                   transition={{ duration: 0.5, delay: index * 0.1 }}
                   whileHover={{ y: -12, transition: { duration: 0.3 } }}
                   onClick={() => setSelectedProject(project)}
-                  className="cursor-pointer bg-white rounded-2xl shadow-lg overflow-hidden border border-[var(--border)] hover:border-[var(--accent)] hover:shadow-2xl transition-all duration-500"
+                  className="cursor-pointer bg-white rounded-2xl shadow-lg overflow-hidden border border-(--border) hover:border-(--accent) hover:shadow-2xl transition-all duration-500"
                 >
                   <div className="relative overflow-hidden">
                     <Image
@@ -71,16 +71,16 @@ function Projects() {
                       alt={project.title}
                       className="w-full h-56 object-cover transition-transform duration-700 hover:scale-110"
                     />
-                    <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 hover:opacity-100 transition-opacity duration-300 flex items-end p-6">
+                    <div className="absolute inset-0 bg-linear-to-t from-black/60 to-transparent opacity-0 hover:opacity-100 transition-opacity duration-300 flex items-end p-6">
                       <p className="text-white font-semibold">Click to view details</p>
                     </div>
                   </div>
 
                   <div className="p-6">
-                    <h3 className="text-2xl font-bold text-[var(--text-secondary)] mb-2">
+                    <h3 className="text-2xl font-bold text-(--text-secondary) mb-2">
                       {project.title}
                     </h3>
-                    <p className="text-sm text-[var(--accent)] font-medium mb-4">{project.date}</p>
+                    <p className="text-sm text-(--accent) font-medium mb-4">{project.date}</p>
 
                     <div className="flex flex-wrap gap-2">
                       {project.technologies
@@ -89,7 +89,7 @@ function Projects() {
                         .map((tech, i) => (
                           <span
                             key={i}
-                            className="px-3 py-1 bg-[var(--bg-main)] text-[var(--text-primary)] text-xs rounded-full font-medium"
+                            className="px-3 py-1 bg-(--bg-main) text-(--text-primary) text-xs rounded-full font-medium"
                           >
                             {tech}
                           </span>
@@ -136,7 +136,7 @@ function Projects() {
                   onClick={() => setSelectedProject(null)}
                   className="absolute top-4 right-4 p-2 bg-white/80 rounded-full hover:bg-white shadow-lg z-10"
                 >
-                  <X className="w-6 h-6 text-[var(--text-secondary)]" />
+                  <X className="w-6 h-6 text-(--text-secondary)" />
                 </button>
                 <Image
                   src={selectedProject.img}
@@ -146,12 +146,12 @@ function Projects() {
               </div>
 
               <div className="p-8">
-                <h3 className="text-3xl md:text-4xl font-extrabold text-[var(--text-secondary)] mb-4">
+                <h3 className="text-3xl md:text-4xl font-extrabold text-(--text-secondary) mb-4">
                   {selectedProject.title}
                 </h3>
-                <p className="text-sm text-[var(--accent)] font-medium mb-6">{selectedProject.date}</p>
+                <p className="text-sm text-(--accent) font-medium mb-6">{selectedProject.date}</p>
 
-                <p className="text-lg text-[var(--text-main)] leading-relaxed mb-8">
+                <p className="text-lg text-(--text-main) leading-relaxed mb-8">
                   {selectedProject.description}
                 </p>
 
@@ -159,7 +159,7 @@ function Projects() {
                   {selectedProject.technologies.map((tech, i) => (
                     <span
                       key={i}
-                      className="px-4 py-2 bg-[var(--bg-main)] text-[var(--text-primary)] rounded-full font-medium"
+                      className="px-4 py-2 bg-(--bg-main) text-(--text-primary) rounded-full font-medium"
                     >
                       {tech}
                     </span>
@@ -171,7 +171,7 @@ function Projects() {
                     href={selectedProject.demoLink}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="flex items-center gap-2 px-6 py-3 bg-[var(--accent)] hover:bg-[var(--accent-hover)] text-white rounded-xl font-semibold transition-all shadow-md hover:shadow-lg"
+                    className="flex items-center gap-2 px-6 py-3 bg-(--accent) hover:bg-(--accent-hover) text-white rounded-xl font-semibold transition-all shadow-md hover:shadow-lg"
                   >
                     <ExternalLink className="w-5 h-5" />
                     Live Demo
