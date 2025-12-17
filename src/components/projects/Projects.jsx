@@ -38,8 +38,8 @@ function Projects() {
                 transition={{ delay: index * 0.1 }}
                 onClick={() => setSelectedTech(tech)}
                 className={`px-8 py-3 rounded-xl font-semibold text-lg transition-all duration-300 ${selectedTech === tech
-                  ? 'bg-(--accent) text-white shadow-lg'
-                  : 'bg-white text-(--text-secondary) border border-(--border) hover:border-(--accent) hover:shadow-md'
+                  ? 'bg-(--accent) text-(--text-secondary) shadow-lg'
+                  : 'bg-(--bg-container) text-(--text-secondary) border border-(--border) hover:border-(--accent) hover:shadow-md'
                   }`}
               >
                 {tech === 'All' ? 'All Projects' : tech}
@@ -62,9 +62,9 @@ function Projects() {
                   transition={{ duration: 0.5, delay: index * 0.1 }}
                   whileHover={{ y: -12, transition: { duration: 0.3 } }}
                   onClick={() => setSelectedProject(project)}
-                  className="cursor-pointer bg-white rounded-2xl shadow-lg overflow-hidden border border-(--border) hover:border-(--accent) hover:shadow-2xl transition-all duration-500"
+                  className="cursor-pointer bg-(--bg-container) py-6 rounded-2xl shadow-lg overflow-hidden border border-(--border) hover:border-(--accent) hover:shadow-2xl transition-all duration-500"
                 >
-                  <div className="relative overflow-hidden flex justify-center">
+                  <div className="relative overflow-hidden flex justify-center items-center">
                     <Image
                       src={project.cover}
                       alt={project.title}
@@ -75,11 +75,11 @@ function Projects() {
                     </div>
                   </div>
 
-                  <div className="p-6">
-                    <h3 className="text-2xl font-bold text-(--text-secondary) mb-2">
+                  <div className="px-4 pt-6">
+                    <h3 className="text-xl font-bold text-(--text-secondary) mb-2">
                       {project.title}
                     </h3>
-                    <p className="text-sm text-(--accent) font-medium mb-4">{project.date}</p>
+                    <p className="text-sm text-(--text-main) font-medium mb-4">{project.date}</p>
 
                     <div className="flex flex-wrap gap-2">
                       {project.technologies
@@ -128,12 +128,12 @@ function Projects() {
               animate={{ scale: 1, opacity: 1 }}
               exit={{ scale: 0.8, opacity: 0 }}
               onClick={(e) => e.stopPropagation()}
-              className="bg-white rounded-2xl shadow-2xl max-w-4xl w-full max-h-[90vh] overflow-y-auto custom-scrollbar"
+              className="bg-(--bg-container) border border-(--border) rounded-2xl shadow-2xl max-w-4xl w-full max-h-[90vh] overflow-y-auto custom-scrollbar"
             >
               <div className="relative px-5 pt-15">
                 <button
                   onClick={() => setSelectedProject(null)}
-                  className="absolute top-3 right-4 p-2 bg-white/80 rounded-full text-(--text-secondary) hover:bg-white hover:text-red-800 duration-300 shadow-lg z-10"
+                  className="absolute top-3 right-4 p-2 bg-(--bg-container) border border-(--border) rounded-full text-(--text-secondary) hover:text-red-800 duration-300 shadow-lg z-10"
                 >
                   <X className="w-6 h-6" />
                 </button>
@@ -148,7 +148,7 @@ function Projects() {
                 <h3 className="text-3xl md:text-4xl font-extrabold text-(--text-secondary) mb-4">
                   {selectedProject.title}
                 </h3>
-                <p className="text-sm text-(--accent) font-medium mb-6">{selectedProject.date}</p>
+                <p className="text-sm text-(--text-main) font-medium mb-6">{selectedProject.date}</p>
 
                 <p className="text-lg text-(--text-main) leading-relaxed mb-8">
                   {selectedProject.description}
