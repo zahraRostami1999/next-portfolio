@@ -18,14 +18,14 @@ function Projects() {
       )
     );
   return (
-    <div className="bg-(--bg-container) p-5 rounded-xl shadow-md border border-(--border) text-(--text-main)">
-      <section className="py-16 px-6 md:px-12 lg:px-24">
+    <div className="bg-(--bg-container) p-5 py-10 rounded-xl shadow-md border border-(--border) text-(--text-main)">
+      <section className="px-6 md:px-12 lg:px-16">
         <div className="max-w-6xl mx-auto">
           <motion.h2
             initial={{ opacity: 0, y: -30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
-            className="text-4xl md:text-5xl font-extrabold text-(--text-secondary) text-center mb-12"
+            className="text-4xl md:text-5xl font-extrabold text-(--text-secondary) text-center mb-10"
           >
             Projects
           </motion.h2>
@@ -47,10 +47,9 @@ function Projects() {
             ))}
           </div>
 
-          {/* گالری پروژه‌ها */}
           <motion.div
             layout
-            className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"
+            className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4"
           >
             <AnimatePresence mode="wait">
               {filteredProjects.map((project, index) => (
@@ -65,11 +64,11 @@ function Projects() {
                   onClick={() => setSelectedProject(project)}
                   className="cursor-pointer bg-white rounded-2xl shadow-lg overflow-hidden border border-(--border) hover:border-(--accent) hover:shadow-2xl transition-all duration-500"
                 >
-                  <div className="relative overflow-hidden">
+                  <div className="relative overflow-hidden flex justify-center">
                     <Image
                       src={project.cover}
                       alt={project.title}
-                      className="w-full h-56 object-cover transition-transform duration-700 hover:scale-110"
+                      className="w-32 h-32 transition-transform duration-700 hover:scale-110"
                     />
                     <div className="absolute inset-0 bg-linear-to-t from-black/60 to-transparent opacity-0 hover:opacity-100 transition-opacity duration-300 flex items-end p-6">
                       <p className="text-white font-semibold">Click to view details</p>
@@ -122,26 +121,26 @@ function Projects() {
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
             onClick={() => setSelectedProject(null)}
-            className="fixed inset-0 bg-black/70 z-50 flex items-center justify-center p-4"
+            className="fixed inset-0 bg-black/70 z-50 flex items-center justify-center p-4 "
           >
             <motion.div
               initial={{ scale: 0.8, opacity: 0 }}
               animate={{ scale: 1, opacity: 1 }}
               exit={{ scale: 0.8, opacity: 0 }}
               onClick={(e) => e.stopPropagation()}
-              className="bg-white rounded-2xl shadow-2xl max-w-4xl w-full max-h-[90vh] overflow-y-auto"
+              className="bg-white rounded-2xl shadow-2xl max-w-4xl w-full max-h-[90vh] overflow-y-auto custom-scrollbar"
             >
               <div className="relative px-5 pt-15">
                 <button
                   onClick={() => setSelectedProject(null)}
-                  className="absolute top-4 right-4 p-2 bg-white/80 rounded-full hover:bg-white shadow-lg z-10"
+                  className="absolute top-3 right-4 p-2 bg-white/80 rounded-full text-(--text-secondary) hover:bg-white hover:text-red-800 duration-300 shadow-lg z-10"
                 >
-                  <X className="w-6 h-6 text-(--text-secondary)" />
+                  <X className="w-6 h-6" />
                 </button>
                 <Image
                   src={selectedProject.img}
                   alt={selectedProject.title}
-                  className="w-full h-96  rounded-t-2xl"
+                  className="w-full h-96  rounded-2xl"
                 />
               </div>
 

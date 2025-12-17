@@ -30,14 +30,14 @@ function Contact() {
   ];
 
   return (
-    <div className="bg-(--bg-container) p-5 rounded-xl shadow-md border border-(--border) text-(--text-secondary)">
-      <section className="py-12 px-6">
+    <div className="bg-(--bg-container) p-5 py-10 rounded-xl shadow-md border border-(--border) text-(--text-secondary)">
+      <section>
         <div className="max-w-4xl mx-auto text-center">
           <motion.h2
             initial={{ opacity: 0, y: -30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, ease: "easeOut" }}
-            className="text-4xl md:text-5xl font-extrabold text-(--text-secondary) mb-4"
+            className="text-4xl md:text-5xl font-extrabold text-(--text-secondary) mb-10"
           >
             Get in Touch
           </motion.h2>

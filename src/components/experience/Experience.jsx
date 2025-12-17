@@ -3,10 +3,10 @@ import { Building2, Briefcase } from 'lucide-react';
 
 function Experience() {
   return (
-    <div className="pt-0 p-5 rounded-xl text-(--text-main)">
-      <section className="pt-5 pb-16 px-6">
+    <div className="px-5 py-10 rounded-xl text-(--text-main)">
+      <section className="">
         <div className="max-w-5xl mx-auto">
-          <h2 className="text-4xl md:text-5xl font-extrabold text-(--text-secondary) text-center mb-20">
+          <h2 className="text-4xl md:text-5xl font-extrabold text-(--text-secondary) text-center mb-16">
             Work Experience
           </h2>
 

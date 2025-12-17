@@ -4,8 +4,8 @@ import SkillCard from '../card/SkillCard';
 
 export const Skills = () => {
   return (
-    <div className="bg-(--bg-container) backdrop-blur-sm rounded-2xl p-8 border border-(--border)">
-      <h2 className="text-4xl font-extrabold md:text-5xl text-center mb-20 text-(--text-secondary)">
+    <div className="bg-(--bg-container) backdrop-blur-sm rounded-2xl px-5 py-10 border border-(--border)">
+      <h2 className="text-4xl font-extrabold md:text-5xl text-center mb-10 text-(--text-secondary)">
         Skills
       </h2>
 
