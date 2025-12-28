@@ -8,17 +8,25 @@ export default function About() {
   const [imgLoaded, setImgLoaded] = useState(false);
   const [downloading, setDownloading] = useState(false);
 
-  const handleDownload = () => {
+  const handleDownload = async () => {
     setDownloading(true);
+
+    const res = await fetch("/Resume.pdf");
+    const blob = await res.blob();
+
+    const url = window.URL.createObjectURL(blob);
     const link = document.createElement("a");
-    link.href = "/Resume.pdf";
+    link.href = url;
     link.download = "Zahra_Rostami_Resume.pdf";
     document.body.appendChild(link);
     link.click();
-    document.body.removeChild(link);
-    setTimeout(() => setDownloading(false), 1000);
-  };
 
+    document.body.removeChild(link);
+    window.URL.revokeObjectURL(url);
+
+    setDownloading(false);
+  };
+  
   return (
     <div className="w-full bg-(--bg-container) lg:py-0 sm:py-10 py-3 flex flex-wrap items-center p-5 h-[90vh] rounded-xl shadow-md border border-(--border)">
       <div className="lg:px-2 w-full flex lg:justify-between sm:flex-wrap-reverse justify-center flex-wrap-reverse">
@@ -51,9 +59,8 @@ export default function About() {
               <button
                 onClick={handleDownload}
                 disabled={downloading}
-                className={`bg-(--accent) hover:bg-(--accent-hover) shadow-md hover:shadow-xl text-white py-3 rounded-xl px-5 drop-shadow-lg transition-all ${
-                  downloading ? "opacity-70 cursor-not-allowed" : ""
-                }`}
+                className={`bg-(--accent) hover:bg-(--accent-hover) shadow-md hover:shadow-xl text-white py-3 rounded-xl px-5 drop-shadow-lg transition-all ${downloading ? "opacity-70 cursor-not-allowed" : ""
+                  }`}
               >
                 {downloading ? "Downloading..." : "Download Resume"}
               </button>
