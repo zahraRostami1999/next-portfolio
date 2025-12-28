@@ -9,7 +9,7 @@ export default function About() {
   const [downloading, setDownloading] = useState(false);
 
 const handleDownload = () => {
-  window.open("/Resume.pdf", "_blank");
+  window.open(`${window.location.origin}//Resume.pdf`, "_blank");
 };
 
   return (
